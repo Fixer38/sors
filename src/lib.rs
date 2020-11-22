@@ -1,4 +1,5 @@
 pub mod bubblesort;
+pub mod insertionsort;
 
 pub trait Sorter {
     fn sort<T>(slice: &mut [T])
