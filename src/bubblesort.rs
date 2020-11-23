@@ -27,8 +27,6 @@ impl Sorter for BubbleSort {
 
 #[test]
 fn it_works() {
-    use super::Sorter;
-
     let mut unsorted_vec = [18, 2, 1, 4, 9];
     BubbleSort::sort(&mut unsorted_vec);
     assert_eq!(unsorted_vec, [1, 2, 4, 9, 18]);
