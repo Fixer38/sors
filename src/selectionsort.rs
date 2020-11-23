@@ -26,18 +26,8 @@ impl Sorter for SelectionSort {
 
             smallest_in_unordered = smallest_in_unordered + unsorted;
             
-            // OR slow implementation 
-            
-            let mut smallest_in_unordered_2 = unsorted;
-            for i in unsorted..slice.len() {
-                if slice[i] < slice[smallest_in_unordered_2] {
-                    smallest_in_unordered_2 = i;
-                }
-            }
-
-            assert_eq!(smallest_in_unordered, smallest_in_unordered_2);
-            if unsorted != smallest_in_unordered_2 {
-                slice.swap(unsorted, smallest_in_unordered_2);
+            if unsorted != smallest_in_unordered {
+                slice.swap(unsorted, smallest_in_unordered);
             }
         }
     }
